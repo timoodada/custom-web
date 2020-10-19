@@ -1,0 +1,35 @@
+@import "reset";
+@import "variable";
+@import "mixin";
+
+body {
+  margin: 0;
+  @include font-family;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+input{
+  @include font-family;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+html, body {
+  height: 100%;
+  background: $color-background-body;
+}
+a{
+  color: $primary-color;
+  -webkit-backface-visibility: hidden;
+  text-decoration: none;
+  outline: none;
+  &:hover{
+    color: lighten($primary-color, 0.2);
+  }
+  &:active, &:focus{
+    color: darken($primary-color, 0.2);
+  }
+}
